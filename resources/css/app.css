@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Track */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: black; /* Color of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(202 138 4); /* Color on handle hover */
+}
+
+
+@layer utilities {
+    th,
+    td {
+        @apply p-2 h-16
+    }
+    
+    tr {
+        border-bottom: solid 1px rgb(211, 211, 211);
+    }
+
+    td button{
+        @apply p-2 text-white rounded-full
+    }
+
+    td a{
+        @apply p-2 text-white rounded-full
+    }
+
+    .action-btn{
+        @apply w-32
+    }
+
+    h1{
+        @apply text-2xl
+    }
+    
+    h2{
+        @apply text-xl
+    }
+
+    h3{
+        @apply text-lg
+    }
+
+    tr th:first-of-type{
+        @apply rounded-tl-xl
+    }
+
+    tr th:last-of-type{
+        @apply rounded-tr-xl
+    }
+    
+}
