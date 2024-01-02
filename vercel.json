@@ -1,10 +1,27 @@
 {
     "version": 2,
     "builds": [
-      { "src": "public/**", "use": "@vercel/static" },
-      { "src": "/.*", "use": "@vercel/php" }
+      {
+        "src": "public/**",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "/.*",
+        "use": "@vercel/php"
+      }
     ],
     "routes": [
-      { "src": "/web/(.*)", "dest": "/index.php" }
-    ]
+      {
+        "src": "/api/(.*)",
+        "dest": "/index.php"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.php"
+      }
+    ],
+    "env": {
+      "YOUR_ENV_VARIABLE": "your-value-here"
+    }
   }
+  
