@@ -1,8 +1,17 @@
 {
     "version": 2,
-    "framework": null,
-    "routes": [{
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/index.php"
+      },
+      {
         "src": "/(.*)",
-        "dest": "public/index.php"
-    }]
-}
+        "dest": "/index.php"
+      },
+      {
+        "src": "/build/(.*)",
+        "dest": "/public/build/$1"
+      }
+    ]
+  }
