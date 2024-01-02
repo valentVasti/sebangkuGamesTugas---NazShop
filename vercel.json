@@ -12,16 +12,9 @@
     ],
     "routes": [
       {
-        "src": "/api/(.*)",
-        "dest": "/index.php"
-      },
-      {
         "src": "/(.*)",
         "dest": "/index.php"
       }
-    ],
-    "env": {
-      "YOUR_ENV_VARIABLE": "your-value-here"
-    }
+    ]
   }
   
